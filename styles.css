@@ -1087,6 +1087,62 @@ h3 {
   white-space: nowrap;
 }
 
+/* An issue: one request for the claims short for the same reason, with the claims beneath it. */
+.draft-issue {
+  border-top: 1px solid var(--rule);
+  padding: 10px 4px 6px;
+}
+
+.issue-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0;
+}
+
+.issue-head .num {
+  margin-left: auto;
+}
+
+.issue-why {
+  margin: 2px 0 8px;
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+
+.issue-items {
+  list-style: none;
+  margin: 0 0 0 10px;
+  padding: 0 0 0 12px;
+  border-left: 3px solid var(--rule-strong);
+}
+
+.draft-shape,
+.batch-shape {
+  margin: 12px 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-2);
+}
+
+.batch-shape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 8px;
+}
+
+.claim-list {
+  margin-top: 16px;
+}
+
+.claim-list caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
 .approve {
   display: flex;
   flex-wrap: wrap;
@@ -1779,6 +1835,11 @@ body.touring main {
   .draft-item .draft-deadline,
   .draft-item .link-btn {
     grid-column: 2 / -1;
+  }
+
+  .issue-items {
+    margin-left: 2px;
+    padding-left: 8px;
   }
 
   .facts-list {
