@@ -848,6 +848,12 @@ h3 {
   color: var(--ink-2);
 }
 
+/* A statute's subsection letters are part of the citation: 17B:27-44.2(d)(9) is not (D)(9). */
+.clause cite.statute {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
 .remit-row {
   cursor: pointer;
 }
@@ -1352,6 +1358,55 @@ mark.merge {
 
 .report-notes > * + * {
   margin-top: 8px;
+}
+
+/* ---- recovery invoice ---------------------------------------------------------------------------------------- */
+
+.invoice {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.invoice-controls {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 260px);
+  gap: 8px 12px;
+  align-items: center;
+  margin: 12px 0 4px;
+}
+
+.invoice-controls .input {
+  min-width: 0;
+  width: 100%;
+}
+
+.invoice-controls .fee-input {
+  max-width: 110px;
+}
+
+.invoice-controls .input[aria-invalid="true"] {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1px var(--red);
+}
+
+/* Outside the grid: a long status message must not widen the label column. */
+.invoice .export-row {
+  margin: 10px 0 0;
+}
+
+.invoice-sum {
+  margin: 10px 0;
+}
+
+.invoice-sum strong {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.invoice-table tr.is-unbilled td {
+  color: var(--ink-2);
 }
 
 /* ---- rules ------------------------------------------------------------------------------------------------- */
