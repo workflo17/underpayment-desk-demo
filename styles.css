@@ -1642,6 +1642,109 @@ body.touring main {
   padding-left: 18px;
 }
 
+/* ---- contract onboarding: loading a fee schedule, rates learned from payments -------------------------- */
+
+.load-form {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: center;
+  max-width: 760px;
+  margin-top: 12px;
+}
+
+.load-form .input {
+  min-width: 0;
+  width: 100%;
+}
+
+.check-label,
+.load-actions,
+.load-form .form-status {
+  grid-column: 1 / -1;
+}
+
+.check-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.load-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.load-actions .muted {
+  font-size: 0.88rem;
+}
+
+.import-result {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.import-head {
+  overflow-wrap: anywhere;
+}
+
+.import-contract,
+.import-stored {
+  padding: 10px 14px;
+  border-left: 3px solid var(--ok);
+  background: var(--ok-pale);
+  border-radius: 3px;
+}
+
+.bad-rows td:last-child {
+  overflow-wrap: anywhere;
+}
+
+.term-problems {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.terms-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.term {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid var(--rule-strong);
+}
+
+.term.is-on {
+  background: var(--ok-pale);
+  color: var(--ok);
+  border-color: transparent;
+}
+
+.term.is-off {
+  background: var(--amber-pale);
+  color: var(--amber);
+  border-color: transparent;
+}
+
+.proposals tr.is-weak td {
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .load-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 980px) {
   .claim-grid,
   .side-by-side,
