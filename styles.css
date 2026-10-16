@@ -1698,6 +1698,64 @@ body.touring main {
   padding-left: 18px;
 }
 
+/* ---- the work list's bands, and denials -------------------------------------------------------------- */
+
+.band-row th {
+  padding: 12px 10px 6px;
+  text-align: left;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  background: var(--paper);
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.denials {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.denial-group + .denial-group {
+  margin-top: 14px;
+}
+
+.denial-group h3 {
+  margin: 10px 0 4px;
+  font-size: 0.98rem;
+}
+
+.denial-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.denial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 14px;
+  padding: 7px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.92rem;
+}
+
+.denial-what {
+  overflow-wrap: anywhere;
+}
+
+.denial-due {
+  color: var(--ink-2);
+}
+
+.denial-due.is-urgent {
+  color: var(--red);
+  font-weight: 600;
+}
+
 /* ---- follow-up: this week on the desk, and each batch's follow-up on the Appeals screen ---------------- */
 
 .week {
