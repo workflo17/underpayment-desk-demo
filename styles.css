@@ -1698,6 +1698,121 @@ body.touring main {
   padding-left: 18px;
 }
 
+/* ---- follow-up: this week on the desk, and each batch's follow-up on the Appeals screen ---------------- */
+
+.week {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 14px 22px;
+  margin-top: 12px;
+}
+
+.week-block h3 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+}
+
+.week-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.week-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 12px;
+  padding: 7px 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.92rem;
+}
+
+.week-when {
+  grid-column: 1 / -1;
+  font-size: 0.86rem;
+  color: var(--ink-2);
+}
+
+.week-what {
+  overflow-wrap: anywhere;
+}
+
+.week-why {
+  grid-column: 1 / -1;
+  font-size: 0.86rem;
+  color: var(--ink-2);
+}
+
+.follow-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.follow {
+  padding: 8px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.follow-line {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.follow-what {
+  margin-right: 6px;
+}
+
+.follow-record summary {
+  margin-top: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.follow-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 8px 12px;
+  margin-top: 8px;
+  max-width: 760px;
+}
+
+.follow-field {
+  display: grid;
+  gap: 4px;
+}
+
+.follow-field label {
+  font-size: 0.86rem;
+  color: var(--ink-2);
+}
+
+.follow-field.is-wide,
+.follow-actions {
+  grid-column: 1 / -1;
+}
+
+.follow-field[hidden] {
+  display: none;
+}
+
+.follow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
 /* ---- contract onboarding: loading a fee schedule, rates learned from payments -------------------------- */
 
 .load-form {
